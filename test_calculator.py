@@ -1,3 +1,7 @@
+# https://github.com/belyaeva9300/lab11b-MB-ST.git
+# Partner 1: Masha Belyaeva
+# Partner 2: Sebastian Tejada
+
 import unittest
 from calculator import *
 
@@ -9,9 +13,9 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(add(0, 0), 0)
 
     def test_subtract(self):  # 3 assertions
-        self.assertEqual(sub(3, 2), 1)
-        self.assertEqual(sub(0, 4), -4)
-        self.assertEqual(sub(-2, -3), 1)
+        self.assertEqual(subtract(3, 2), 1)
+        self.assertEqual(subtract(0, 4), -4)
+        self.assertEqual(subtract(-2, -3), 1)
 
     ##########################
 
@@ -33,19 +37,19 @@ class TestCalculator(unittest.TestCase):
             div(0, 5)
 
     def test_logarithm(self):  # 3 assertions
-        self.assertAlmostEqual(log(10, 100), 2)
-        self.assertAlmostEqual(log(2, 8), 3)
-        self.assertAlmostEqual(log(5, 25), 2)
+        self.assertAlmostEqual(logarithm(10, 100), 2)
+        self.assertAlmostEqual(logarithm(2, 8), 3)
+        self.assertAlmostEqual(logarithm(5, 25), 2)
 
     def test_log_invalid_base(self):  # 1 assertion
         with self.assertRaises(ValueError):
-            log(1, 10)
+            logarithm(1, 10)
     ##########################
 
     ######## Partner 1
     def test_log_invalid_argument(self):
         with self.assertRaises(ValueError):
-            log( 10,-1)
+            logarithm( 10,-1)
 
     def test_hypotenuse(self):
         self.assertAlmostEqual(hypotenuse(5, 12), 13.0)
